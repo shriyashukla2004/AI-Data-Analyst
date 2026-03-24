@@ -1,24 +1,27 @@
-# DataWhisper 🔮
+# AI Data Analyst
 ### Talk to your data. Get instant SQL, charts & AI insights.
 
 DataWhisper is an AI-powered data analyst chatbot that lets you upload any CSV or Excel dataset and query it in plain English. It automatically generates SQL, runs it against your data, visualizes the results, and delivers AI-powered business insights — all in a sleek chat interface.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📂 **Upload any dataset** — CSV, XLSX, or XLS. No configuration needed
-- 💬 **Natural language queries** — Ask questions in plain English, get SQL + results instantly
-- 📊 **Auto-generated charts** — Bar, line, and pie charts rendered automatically based on your data
-- 🧠 **AI-powered insights** — Numbered, clearly formatted business insights for every query
-- 🗂️ **Query history** — Browse, search, expand, and re-run past queries
-- 📋 **Dynamic schema awareness** — The AI reads your actual column names and types before generating SQL
-- 🖥️ **Streamlit dashboard** — Alternative dashboard view alongside the React UI
-- 🔒 **Safe SQL only** — Only SELECT queries are allowed; all writes are blocked
+-  **Upload any dataset** — CSV, XLSX, or XLS. No configuration needed
+-  **Natural language queries** — Ask questions in plain English, get SQL + results instantly
+-  **Auto-generated charts** — Bar, line, and pie charts rendered automatically based on your data
+-  **AI-powered insights** — Numbered, clearly formatted business insights for every query
+-  **Query history** — Browse, search, expand, and re-run past queries
+-  **Dynamic schema awareness** — The AI reads your actual column names and types before generating SQL
+-  **Streamlit dashboard** — Alternative dashboard view alongside the React UI
+-  **Safe SQL only** — Only SELECT queries are allowed; all writes are blocked
 
 ---
 
-## 🖼️ Preview
+##  Preview
+
+<img width="1912" height="822" alt="image" src="https://github.com/user-attachments/assets/91ac7cf1-5868-438e-87e8-d4382bb431d4" />
+
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -39,7 +42,7 @@ DataWhisper is an AI-powered data analyst chatbot that lets you upload any CSV o
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 DataWhisper/
@@ -89,7 +92,7 @@ DataWhisper/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -193,7 +196,7 @@ Opens at **http://localhost:8501**
 
 ---
 
-## 🖥️ Running All Three (Recommended)
+##  Running All Three (Recommended)
 
 Open **3 separate terminals**:
 
@@ -207,7 +210,7 @@ Open **3 separate terminals**:
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -245,7 +248,7 @@ Response:
 
 ---
 
-## 🔒 Security
+##  Security
 
 - Only `SELECT` queries are permitted — all `INSERT`, `UPDATE`, `DELETE`, `DROP`, and `ALTER` statements are blocked at both the LLM and database layers
 - Uploaded files are stored locally in `backend/uploads/` and loaded into a local SQLite database
@@ -253,7 +256,7 @@ Response:
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 **`ModuleNotFoundError`**
 ```bash
@@ -295,13 +298,13 @@ pip install openpyxl
 
 ---
 
-## 📄 License
+##  License
 
 MIT License — free to use, modify, and distribute.
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - [Groq](https://groq.com) — blazing fast LLM inference
 - [Recharts](https://recharts.org) — React chart library
