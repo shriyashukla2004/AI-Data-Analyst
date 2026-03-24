@@ -1,7 +1,7 @@
 # AI Data Analyst
 ### Talk to your data. Get instant SQL, charts & AI insights.
 
-DataWhisper is an AI-powered data analyst chatbot that lets you upload any CSV or Excel dataset and query it in plain English. It automatically generates SQL, runs it against your data, visualizes the results, and delivers AI-powered business insights — all in a sleek chat interface.
+The AI Data Analyst is an AI-powered data analyst chatbot that lets you upload any CSV or Excel dataset and query it in plain English. It automatically generates SQL, runs it against your data, visualizes the results, and delivers AI-powered business insights — all in a sleek chat interface.
 
 ---
 
