@@ -1,70 +1,310 @@
-# Getting Started with Create React App
+# AI Data Analyst
+### Talk to your data. Get instant SQL, charts & AI insights.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DataWhisper is an AI-powered data analyst chatbot that lets you upload any CSV or Excel dataset and query it in plain English. It automatically generates SQL, runs it against your data, visualizes the results, and delivers AI-powered business insights — all in a sleek chat interface.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 📂 **Upload any dataset** — CSV, XLSX, or XLS. No configuration needed
+- 💬 **Natural language queries** — Ask questions in plain English, get SQL + results instantly
+- 📊 **Auto-generated charts** — Bar, line, and pie charts rendered automatically based on your data
+- 🧠 **AI-powered insights** — Numbered, clearly formatted business insights for every query
+- 🗂️ **Query history** — Browse, search, expand, and re-run past queries
+- 📋 **Dynamic schema awareness** — The AI reads your actual column names and types before generating SQL
+- 🖥️ **Streamlit dashboard** — Alternative dashboard view alongside the React UI
+- 🔒 **Safe SQL only** — Only SELECT queries are allowed; all writes are blocked
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🖼️ Preview
 
-### `npm test`
+```
+┌─────────────────────────────────────────────────────────┐
+│  ⬡ ANALYST          │  Query Intelligence               │
+│                      │  ┌──────────────────────────────┐│
+│  WORKSPACE           │  │ sales.csv · 5,000 rows · 8 cols│
+│  ◈ Chat Query  ●     │  └──────────────────────────────┘│
+│  ◉ History           │                                   │
+│  ↑ Upload Data       │  Ask: "Total sales by region"    │
+│                      │  → SQL generated & executed       │
+│  SYSTEM              │  → Bar chart rendered             │
+│  ◎ Settings          │  → 5 AI insights shown            │
+│                      │                                   │
+│  ● Dataset loaded    │  [ Ask anything about sales.csv ]│
+│  Llama 3.3 70B       │                          [SEND ↑]│
+└─────────────────────────────────────────────────────────┘
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🗂️ Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+DataWhisper/
+├── backend/
+│   ├── app.py              # Flask API — all endpoints
+│   ├── db.py               # SQLite engine, file loader, query runner
+│   ├── llm.py              # Groq LLM client, dynamic SQL prompt builder
+│   ├── query_pipeline.py   # Connects LLM → DB
+│   ├── chart.py            # Auto chart type detection + formatting
+│   ├── insight.py          # AI insight + chart explanation generator
+│   ├── history.py          # Save/load/clear query history (JSON)
+│   ├── dashboard.py        # Streamlit dashboard
+│   └── .env                # API keys (not committed)
+│
+└── frontend/
+    └── src/
+        ├── App.js                      # Root — routing + layout
+        ├── App.css                     # Full design system (dark theme)
+        ├── index.js
+        ├── index.css
+        └── components/
+            ├── ChatWindow.jsx          # Chat interface + message sending
+            ├── Message.jsx             # Individual message bubble
+            ├── ChartRenderer.jsx       # Recharts bar/line/pie renderer
+            ├── InsightCard.jsx         # Numbered AI insight cards
+            ├── HistoryPanel.jsx        # Full history browser
+            ├── FileUpload.jsx          # Drag & drop file uploader
+            └── DatasetBanner.jsx       # Active dataset info bar
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Tech Stack
 
-### `npm run eject`
+| Layer | Technology |
+|---|---|
+| Frontend | React 18, Recharts, CSS (custom dark theme) |
+| Backend | Python, Flask, Flask-CORS |
+| Database | SQLite (auto-created from uploaded file) |
+| AI / LLM | Groq API — Llama 3.3 70B, Llama 3.1 8B, Mixtral 8x7B |
+| Data processing | Pandas, SQLAlchemy, OpenPyXL |
+| Dashboard | Streamlit |
+| Fonts | Syne, Inter, JetBrains Mono (Google Fonts) |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Python 3.9+
+- Node.js 18+
+- A free [Groq API key](https://console.groq.com)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Clone the repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/yourusername/datawhisper.git
+cd datawhisper
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Backend setup
 
-### Analyzing the Bundle Size
+```bash
+cd backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Create and activate virtual environment
+python -m venv venv
 
-### Making a Progressive Web App
+# Windows
+venv\Scripts\activate
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Mac / Linux
+source venv/bin/activate
 
-### Advanced Configuration
+# Install dependencies
+pip install flask flask-cors sqlalchemy pandas openpyxl groq python-dotenv streamlit
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Create a `.env` file inside the `backend/` folder:
 
-### Deployment
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> Get your free API key at [console.groq.com](https://console.groq.com)
 
-### `npm run build` fails to minify
+Start the Flask server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+python app.py
+```
+
+You should see:
+```
+* Running on http://127.0.0.1:5000
+```
+
+---
+
+### 3. Frontend setup
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+npm install recharts
+
+# Install and configure Tailwind (if not already done)
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Add to the top of `src/index.css`:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Add this to `public/index.html` inside `<head>`:
+```html
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+```
+
+Start the React app:
+```bash
+npm start
+```
+
+Opens at **http://localhost:3000**
+
+---
+
+### 4. (Optional) Streamlit Dashboard
+
+```bash
+cd backend
+streamlit run dashboard.py
+```
+
+Opens at **http://localhost:8501**
+
+---
+
+## 🖥️ Running All Three (Recommended)
+
+Open **3 separate terminals**:
+
+| Terminal | Command | URL |
+|---|---|---|
+| 1 — API | `python app.py` | http://127.0.0.1:5000 |
+| 2 — UI | `npm start` | http://localhost:3000 |
+| 3 — Dashboard | `streamlit run dashboard.py` | http://localhost:8501 |
+
+> Always start the **Flask backend first** before opening the React UI.
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/` | Health check |
+| `POST` | `/upload` | Upload a CSV or Excel file |
+| `GET` | `/dataset` | Get current dataset schema & metadata |
+| `POST` | `/query` | Run a natural language query |
+| `GET` | `/history` | Get all past queries (newest first) |
+| `DELETE` | `/history/clear` | Clear all query history |
+
+### Example — Upload a file
+
+```bash
+curl -X POST http://127.0.0.1:5000/upload \
+  -F "file=@sales_data.csv"
+```
+
+### Example — Run a query
+
+```bash
+curl -X POST http://127.0.0.1:5000/query \
+  -H "Content-Type: application/json" \
+  -d '{"query": "Total sales by region"}'
+```
+
+Response:
+```json
+{
+  "sql": "SELECT region, SUM(sales) AS total_sales FROM sales_data GROUP BY region ORDER BY total_sales DESC LIMIT 100;",
+  "chart": { "type": "bar", "labels": ["North", "South"], "data": [142000, 98000] },
+  "insight": "1. **North Dominates**: The North region leads with $142K...",
+  "chart_explanation": "A bar chart comparing total sales by region."
+}
+```
+
+---
+
+## 🔒 Security
+
+- Only `SELECT` queries are permitted — all `INSERT`, `UPDATE`, `DELETE`, `DROP`, and `ALTER` statements are blocked at both the LLM and database layers
+- Uploaded files are stored locally in `backend/uploads/` and loaded into a local SQLite database
+- No data is sent anywhere except to the Groq API for SQL generation and insight analysis
+
+---
+
+## 🛠️ Troubleshooting
+
+**`ModuleNotFoundError`**
+```bash
+pip install flask flask-cors sqlalchemy pandas openpyxl groq python-dotenv
+```
+
+**`GROQ_API_KEY not found`**
+Make sure `backend/.env` exists and contains your key:
+```env
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxx
+```
+
+**`npm start` — Missing script error**
+```bash
+# Make sure you're inside the frontend folder
+cd frontend
+npm start
+```
+
+**React shows "Could not connect to server"**
+Flask must be running first. Start `python app.py` before opening the React app.
+
+**File upload fails**
+Make sure `openpyxl` is installed for Excel files:
+```bash
+pip install openpyxl
+```
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Multi-table joins (upload multiple files)
+- [ ] Export results as CSV / PDF
+- [ ] Saved dashboards
+- [ ] Authentication & user accounts
+- [ ] PostgreSQL / MySQL support
+- [ ] Voice input queries
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute.
+
+---
+
+## 🙏 Acknowledgements
+
+- [Groq](https://groq.com) — blazing fast LLM inference
+- [Recharts](https://recharts.org) — React chart library
+- [Streamlit](https://streamlit.io) — rapid dashboard framework
+- [Meta Llama 3](https://llama.meta.com) — open source LLM powering the SQL generation
+
+---
+
+<p align="center">Built with ❤️ · <strong>DataWhisper</strong> — Talk to your data</p>
