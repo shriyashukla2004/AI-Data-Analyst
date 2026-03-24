@@ -56,17 +56,20 @@ DataWhisper/
 │
 └── frontend/
     └── src/
-        ├── App.js                      # Root — routing + layout
-        ├── App.css                     # Full design system (dark theme)
+        ├── App.js                     
+        ├── App.css                     
         ├── index.js
         ├── index.css
         └── components/
-            ├── ChatWindow.jsx          # Chat interface + message sending
-            ├── Message.jsx             # Individual message bubble
-            ├── ChartRenderer.jsx       # Recharts bar/line/pie renderer
-            ├── InsightCard.jsx         # Numbered AI insight cards
-            ├── HistoryPanel.jsx        # Full history browser
-            ├── FileUpload.jsx          # Drag & drop file uploader
+            ├── ChatWindow.jsx          
+            ├── Message.jsx            
+            ├── ChartRenderer.jsx       
+            ├── InsightCard.jsx        
+            ├── HistoryPanel.jsx        
+            ├── FileUpload.jsx          
+            ├── MetricsCards.jsx
+            ├── SettingsPanel.jsx
+            ├── TableViewer.jsx
             └── DatasetBanner.jsx       # Active dataset info bar
 ```
 
