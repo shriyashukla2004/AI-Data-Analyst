@@ -20,6 +20,9 @@ The AI Data Analyst is an AI-powered data analyst chatbot that lets you upload a
 
 ## 🖼️ Preview
 
+<img width="1912" height="822" alt="Screenshot 2026-03-24 160505" src="https://github.com/user-attachments/assets/d980da56-5050-434c-a081-3d70392a6d7f" />
+
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  ⬡ ANALYST          │  Query Intelligence               │
