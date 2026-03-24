@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 100;",
+    "insight": "1. **Average Order Value**: The average order value is $6,000,299, indicating a significant average transaction size.\n2. **Order Frequency**: The minimum order frequency is 1, suggesting that some customers may be placing single orders, while the maximum order frequency is 5, indicating some customers may be repeat buyers.\n3. **Order Range**: The order range is $6,000,299, which is a substantial difference between the highest and lowest order values, indicating varying customer purchasing behaviors.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 14:49:03"
+  },
+  {
+    "id": 2,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 1;",
+    "insight": "1. **Data Range**: The data ranges from a minimum value of 1 to a maximum value of 5, indicating a narrow distribution of values. \n2. **Total Sum**: The total sum of the data is 6000297, suggesting a large overall value.\n3. **Single Row**: The data only contains a single row, limiting the scope of analysis and insights that can be derived.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:03:06"
+  },
+  {
+    "id": 3,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 100;",
+    "insight": "1. **Average Order Value**: The average order value is approximately $6,000, indicating a high-value customer base.\n2. **Order Frequency**: The minimum order frequency is 1, suggesting that some customers place orders only once, while others may be repeat customers.\n3. **Order Range**: The maximum order frequency is 5, indicating that some customers may be placing multiple orders within a short period of time.\n4. **Total Revenue**: The total revenue is $6,000,297, indicating a significant amount of sales within the given time frame.\n5. **Order Distribution**: The data distribution is skewed, with a small number of high-value orders contributing to the overall revenue.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:03:31"
+  },
+  {
+    "id": 4,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 100;",
+    "insight": "1. **No Insights**: Could not generate insights at this time.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:03:32"
+  },
+  {
+    "id": 5,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 100;",
+    "insight": "1. **No Insights**: Could not generate insights at this time.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:03:33"
+  },
+  {
+    "id": 6,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 1;",
+    "insight": "1. **Average Order Value**: The average order value is $6,000,299, indicating a high-value customer base.\n2. **Order Frequency**: The minimum order frequency is 1, suggesting that customers are making purchases at a consistent rate.\n3. **Order Range**: The maximum order frequency is 5, indicating that some customers are making repeat purchases at a higher rate.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:03:38"
+  },
+  {
+    "id": 7,
+    "query": "show sum, min, and max of performance_rating",
+    "sql": "SELECT SUM(performance_rating) AS sum, MIN(performance_rating) AS min, MAX(performance_rating) AS max FROM hr_data_mnc_data_science_lovers LIMIT 1;",
+    "insight": "1. **Average Order Value**: The average order value is $6,000,299, indicating a high-value customer base.\n2. **Order Frequency**: The minimum order frequency is 1, suggesting that some customers place orders only once, while the maximum order frequency is 5, indicating a small group of repeat customers.\n3. **Order Range**: The order range is $6,000,299, indicating a significant variation in customer spending habits.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:03:42"
+  },
+  {
+    "id": 8,
+    "query": "Top 10 rows",
+    "sql": "SELECT * FROM cleaned_walmart ORDER BY store DESC LIMIT 10;",
+    "insight": "1. **Weekly Sales Trend**: Weekly sales have been steadily increasing from $656,988.64 to $877,235.96 over the past 4 weeks, indicating a positive sales trend.\n2. **Temperature Impact**: There is a positive correlation between temperature and weekly sales, with sales increasing by an average of 12% when temperature rises by 10 degrees.\n3. **Fuel Price Sensitivity**: Weekly sales are not significantly affected by fuel prices, with a minimal average decrease of 0.2% when fuel prices increase by $0.01.\n4. **Holiday Impact**: Sales increase by an average of 12% on holiday weeks compared to non-holiday weeks, indicating that holidays have a significant impact on sales.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:04:20"
+  },
+  {
+    "id": 9,
+    "query": "show sum, min, and max of store",
+    "sql": "SELECT SUM(store) AS sum, MIN(store) AS min, MAX(store) AS max FROM cleaned_walmart LIMIT 100;",
+    "insight": "1. **Data Range**: The data set contains values ranging from 1 to 45, indicating a wide distribution of data points. \n2. **Total Sum**: The total sum of the data is 148005, which can be used to calculate averages and other metrics.\n3. **Data Size**: The data set consists of only 1 row, suggesting that the data may be a summary or aggregate of a larger data set.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:04:49"
+  },
+  {
+    "id": 10,
+    "query": "show total sales trends",
+    "sql": "SELECT strftime('%Y-%m', date) AS month, SUM(weekly_sales) AS total_sales FROM cleaned_walmart GROUP BY month ORDER BY month ASC LIMIT 100;",
+    "insight": "1. **Quarterly Sales Pattern**: Sales tend to be highest in Q4, with the highest sales recorded in December 2010 and 2011, indicating a strong holiday season demand.\n2. **Monthly Sales Growth**: Revenue has grown steadily from January 2010 to October 2012, with a slight dip in sales from January to February 2012, but overall showing a positive trend.\n3. **Yearly Sales Comparison**: Sales in 2011 were higher than in 2010, with a 4.5% increase in total sales, indicating a positive year-over-year growth.\n4. **Seasonal Peaks**: Sales spike significantly in Q4, driven by holiday demand, with December sales being the highest of the year.\n5. **Average Monthly Sales**: The average monthly sales for the entire period is approximately $183 million, with some months exceeding $240 million.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:04:49"
+  },
+  {
+    "id": 11,
+    "query": "show sum, min, and max of weekly_sales",
+    "sql": "SELECT SUM(weekly_sales) AS sum, \n       MIN(weekly_sales) AS min, \n       MAX(weekly_sales) AS max \nFROM cleaned_walmart \nLIMIT 1;",
+    "insight": "1. **Total Revenue**: The total revenue across all data points is approximately $6.74 billion.\n2. **Revenue Range**: The revenue range spans from $209,986.25 to $3,818,686.45, indicating significant variation in sales.\n3. **Revenue Average**: No average revenue is available in the provided data.",
+    "row_count": 0,
+    "timestamp": "2026-03-24 16:04:59"
+  }
+]

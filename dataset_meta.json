@@ -1,0 +1,79 @@
+{
+  "table_name": "cleaned_walmart",
+  "columns": [
+    {
+      "name": "store",
+      "type": "int64",
+      "sample": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "name": "date",
+      "type": "object",
+      "sample": [
+        "2010-02-05",
+        "2010-02-12",
+        "2010-02-19"
+      ]
+    },
+    {
+      "name": "weekly_sales",
+      "type": "float64",
+      "sample": [
+        "1643690.9",
+        "1641957.44",
+        "1611968.17"
+      ]
+    },
+    {
+      "name": "holiday_flag",
+      "type": "int64",
+      "sample": [
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "name": "temperature",
+      "type": "float64",
+      "sample": [
+        "42.31",
+        "38.51",
+        "39.93"
+      ]
+    },
+    {
+      "name": "fuel_price",
+      "type": "float64",
+      "sample": [
+        "2.572",
+        "2.548",
+        "2.514"
+      ]
+    },
+    {
+      "name": "cpi",
+      "type": "float64",
+      "sample": [
+        "211.0963582",
+        "211.2421698",
+        "211.2891429"
+      ]
+    },
+    {
+      "name": "unemployment",
+      "type": "float64",
+      "sample": [
+        "8.106",
+        "8.106",
+        "8.106"
+      ]
+    }
+  ],
+  "row_count": 6435,
+  "filename": "cleaned_walmart.csv"
+}
