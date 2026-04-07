@@ -102,8 +102,8 @@ DataWhisper/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/datawhisper.git
-cd datawhisper
+git clone https://github.com/shriyashukla2004/AI-Data-Analyst.git
+cd AI-Data-Analyst
 ```
 
 ---
@@ -310,4 +310,4 @@ MIT License — free to use, modify, and distribute.
 
 ---
 
-<p align="center">Built with ❤️ · <strong>DataWhisper</strong> — Talk to your data</p>
+<p align="center">Built with ❤️ · <strong>AI Data Analyst</strong> — Talk to your data</p>
